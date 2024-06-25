@@ -1,0 +1,34 @@
+{    
+  "compilerOptions": {
+      "target": "ESNext",
+      "lib": [
+          "ESNext"
+      ],
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "types": [
+          "node"
+      ],
+      "allowJs": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitOverride": true,
+      "outDir": "./dist",
+      "declarationDir": "./types",
+      "declaration": true
+    },
+  "include": ["./**/*.ts"],
+  "exclude": [
+    "dist",
+    "types/**",
+    "tests/**",
+    "node_modules",
+    "cdk.out",
+    "vitest.config-snap.ts"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@wp-test/test-package-c",
+  "version": "1.0.0",
+  "keywords": [],
+  "license": "UNLICENCED",
+  "exports": {
+    "require": "./dist/cjs/index.cjs",
+    "import": "./dist/esm/index.mjs"
+  },
+  "scripts": {
+    "build": "node esbuild.mjs"
+  },
+  "dependencies": {
+    "@wp-test/test-package-a": "1.0.0",
+    "@wp-test/test-package-e": "1.0.0"
+  }
+}
