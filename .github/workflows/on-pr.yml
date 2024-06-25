@@ -9,6 +9,7 @@ on:
 concurrency: "Merge-${{ github.event.number }}" 
 
 jobs:
+  runs-on: ubuntu-latest
   Release:
     steps:
       - name: Checkout Repo
