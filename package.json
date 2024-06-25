@@ -7,7 +7,7 @@
     "build": "yarn nx run-many --target=build --all"
   },
   "devDependencies": {
-    "@nx/js": "18.x",
+    "@nx/js": "19.3.1",
     "@types/node": "20.11.24",
     "esbuild": "0.20.1",
     "typescript": "5.3.3",
