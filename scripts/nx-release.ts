@@ -6,23 +6,9 @@ const COMMIT_HASH = process.argv[2];
   console.log(`Running nx release on git hash ${COMMIT_HASH}`);
 
   try {
-    const affectedPackages = JSON.parse(
-      await executeCommand(
-        `npx nx show projects --affected --base last-release --json`,
-        `Fetched nx affected packages`,
-        `Failed to get nx affected packages`,
-      ),
-    );
-
-    if (!affectedPackages.length) {
-      console.log('Nothing to Publish as no affected packages found.');
-      return;
-    }
-
     const versionOutput = await releaseVersion({
       dryRun: false,
       verbose: true,
-      projects: affectedPackages,
       gitCommit: false,
       gitTag: true,
     });
