@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": [
+          "build"
+        ]
+      }
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["{projectRoot}/dist", "{projectRoot}/bin", "{projectRoot}/types"]
+    },
+  },
+  "release": {
+    "projects": [
+      "packages/**/*"
+    ],
+    "projectsRelationship": "independent",
+    "changelog": {
+      "automaticFromRef": true,
+      "projectChangelogs": {
+        "file": false,
+        "createRelease": "github"
+      }
+    },
+    "version": {
+      "conventionalCommits": true,
+      "generatorOptions": {
+        "updateDependents": "auto",
+        "fallbackCurrentVersionResolver": "disk"
+      }
+    }
+  },
+}
