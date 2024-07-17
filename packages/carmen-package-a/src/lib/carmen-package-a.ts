@@ -4,6 +4,3 @@ export function carmenPackageA(): string {
 }
 //
 //
-//
-//
-//
