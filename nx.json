@@ -25,7 +25,7 @@
   },
   "release": {
     "projects": ["packages/**/*"],
-
+    "projectsRelationship": "independent",
     "changelog": {
       "automaticFromRef": true,
       "projectChangelogs": {

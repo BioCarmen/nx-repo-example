@@ -1,5 +1,5 @@
 {
-  "name": "carmen-package-a",
+  "name": "utils-package-a",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/carmen-package-a/src",
   "projectType": "library",
