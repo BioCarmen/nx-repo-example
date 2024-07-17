@@ -6,18 +6,18 @@ const COMMIT_HASH = process.argv[2];
   console.log(`Running nx release on git hash ${COMMIT_HASH}`);
 
   try {
-    const { workspaceVersion } = await releaseVersion({
-      dryRun: false,
-      verbose: true,
-      gitCommit: false,
-      gitTag: true,
-      generatorOptionsOverrides: {
-        updateDependents: 'auto',
-      },
-    });
+    // const { workspaceVersion } = await releaseVersion({
+    //   dryRun: false,
+    //   verbose: true,
+    //   gitCommit: false,
+    //   gitTag: true,
+    //   generatorOptionsOverrides: {
+    //     updateDependents: 'auto',
+    //   },
+    // });
 
-    // console.log('versionOutput', JSON.stringify(versionOutput, null, 4));
-    console.log('workspaceVersion', workspaceVersion);
+    // // console.log('versionOutput', JSON.stringify(versionOutput, null, 4));
+    // console.log('workspaceVersion', workspaceVersion);
 
     // after successful publish we tag the commit with last-release and push the tags created by nx version
     await executeCommand(

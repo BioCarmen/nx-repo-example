@@ -1,12 +1,12 @@
-name: On Merge 
+name: On Merge
 run-name: ${{ github.actor }} is running Build on ${{ github.head_ref }}, ${{ github.ref }}
 
 on:
   push:
     branches:
-      - main 
+      - main
 
-concurrency: "Merge-${{ github.event.number }}" 
+concurrency: 'Merge-${{ github.event.number }}'
 
 jobs:
   Release:
@@ -27,4 +27,6 @@ jobs:
           node-version: 20.x
       - run: yarn install --frozen-lockfile
       - run: yarn build
-      - run: yarn ts-node ./scripts/nx-release.ts ${{ github.sha }}
+      - run: |
+          nx release version
+          yarn ts-node ./scripts/nx-release.ts ${{ github.sha }}
