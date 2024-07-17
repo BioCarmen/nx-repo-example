@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@wp-test/test-package-a": "1.2.1",
-    "@wp-test/test-package-c": "1.2.3"
+    "@wp-test/test-package-c": "1.2.3",
+    "carmen-package-a": "0.3.2"
   }
 }
