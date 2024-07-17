@@ -19,7 +19,7 @@
     }
   },
   "release": {
-    "projects": ["packages/**/*", "!private"],
+    "projects": ["packages/folder-b/*"],
     "projectsRelationship": "independent",
     "changelog": {
       "automaticFromRef": true,
