@@ -29,7 +29,8 @@
     "changelog": {
       "automaticFromRef": true,
       "projectChangelogs": {
-        "file": false
+        "file": false,
+        "createRelease": "github"
       }
     },
     "version": {
