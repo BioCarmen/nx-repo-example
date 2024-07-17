@@ -28,5 +28,5 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn build
       - run: |
-          nx release version
+          yarn nx release version
           yarn ts-node ./scripts/nx-release.ts ${{ github.sha }}
