@@ -1,6 +1,6 @@
 {
   "name": "@wp-test/test-package-b",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "keywords": [],
   "license": "UNLICENCED",
   "exports": {
@@ -11,7 +11,7 @@
     "build": "node esbuild.mjs"
   },
   "dependencies": {
-    "@wp-test/test-package-a": "1.2.0",
-    "@wp-test/test-package-c": "1.2.0"
+    "@wp-test/test-package-a": "1.2.1",
+    "@wp-test/test-package-c": "1.2.1"
   }
 }
