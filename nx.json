@@ -4,22 +4,22 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": [
-          "build"
-        ]
+        "cacheableOperations": ["build"]
       }
     }
   },
   "targetDefaults": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["{projectRoot}/dist", "{projectRoot}/bin", "{projectRoot}/types"]
-    },
+      "outputs": [
+        "{projectRoot}/dist",
+        "{projectRoot}/bin",
+        "{projectRoot}/types"
+      ]
+    }
   },
   "release": {
-    "projects": [
-      "packages/**/*"
-    ],
+    "projects": ["packages/**/*", "!private"],
     "projectsRelationship": "independent",
     "changelog": {
       "automaticFromRef": true,
@@ -35,5 +35,5 @@
         "fallbackCurrentVersionResolver": "disk"
       }
     }
-  },
+  }
 }
