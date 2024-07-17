@@ -1,4 +1,4 @@
-import { releaseVersion } from 'nx/release';
+import { releaseVersion, releaseChangelog } from 'nx/release';
 
 const COMMIT_HASH = process.argv[2];
 
@@ -6,15 +6,18 @@ const COMMIT_HASH = process.argv[2];
   console.log(`Running nx release on git hash ${COMMIT_HASH}`);
 
   try {
-    const versionOutput = await releaseVersion({
+    const { workspaceVersion } = await releaseVersion({
       dryRun: false,
       verbose: true,
       gitCommit: false,
       gitTag: true,
+      generatorOptionsOverrides: {
+        updateDependents: 'auto',
+      },
     });
 
-    console.log('versionOutput', JSON.stringify(versionOutput, null, 4));
-    console.log('workspaceVersion', versionOutput.workspaceVersion);
+    // console.log('versionOutput', JSON.stringify(versionOutput, null, 4));
+    console.log('workspaceVersion', workspaceVersion);
 
     // after successful publish we tag the commit with last-release and push the tags created by nx version
     await executeCommand(
@@ -22,6 +25,7 @@ const COMMIT_HASH = process.argv[2];
       'Pushed last-release tag and pushed tags for each published package',
       'Failed to push last-release tag, or failed to push tags for each published package'
     );
+    const changelogOutput = await releaseChangelog({});
   } catch (err) {
     console.log('nx release failed with error', err);
   }
