@@ -1,6 +1,6 @@
 {
   "name": "@wp-test/test-package-b",
-  "version": "1.5.1",
+  "version": "1.3.0",
   "keywords": [],
   "license": "UNLICENCED",
   "private": true,
@@ -12,8 +12,8 @@
     "build": "node esbuild.mjs"
   },
   "dependencies": {
-    "@wp-test/test-package-a": "1.2.1",
-    "@wp-test/test-package-c": "1.2.3",
-    "carmen-package-a": "0.3.3"
+    "@wp-test/test-package-a": "1.3.0",
+    "@wp-test/test-package-c": "1.3.0",
+    "carmen-package-a": "1.3.0"
   }
 }
