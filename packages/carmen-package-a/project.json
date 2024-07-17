@@ -1,0 +1,19 @@
+{
+  "name": "carmen-package-a",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/carmen-package-a/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/carmen-package-a",
+        "main": "packages/carmen-package-a/src/index.ts",
+        "tsConfig": "packages/carmen-package-a/tsconfig.lib.json",
+        "assets": ["packages/carmen-package-a/*.md"]
+      }
+    }
+  }
+}
