@@ -1,6 +1,6 @@
 {
   "name": "@wp-test/test-package-b",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "keywords": [],
   "license": "UNLICENCED",
   "private": true,
@@ -14,6 +14,6 @@
   "dependencies": {
     "@wp-test/test-package-a": "1.2.1",
     "@wp-test/test-package-c": "1.2.3",
-    "carmen-package-a": "0.3.2"
+    "carmen-package-a": "0.3.3"
   }
 }
