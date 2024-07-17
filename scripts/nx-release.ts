@@ -7,13 +7,14 @@ const COMMIT_HASH = process.argv[2];
 
   try {
     const versionOutput = await releaseVersion({
-      dryRun: true,
+      dryRun: false,
       verbose: true,
       gitCommit: false,
       gitTag: true,
     });
 
     console.log('versionOutput', JSON.stringify(versionOutput, null, 4));
+    console.log('workspaceVersion', versionOutput.workspaceVersion);
 
     // after successful publish we tag the commit with last-release and push the tags created by nx version
     await executeCommand(
